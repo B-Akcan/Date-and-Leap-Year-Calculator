@@ -1,11 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showerror
+import numpy as np
 
 days = list(range(1,32))
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 days_of_months = {"January": 31, "March": 31, "April": 30, "May": 31, "June": 30, "July": 31, "August": 31, "September": 30, "October": 31, "November": 30, "December": 31}
-years = list(range(1,2101))
+years = list(np.arange(2100,-1, -1))
 
 def calculate(day1, month1, year1, day2, month2, year2):
     try:
